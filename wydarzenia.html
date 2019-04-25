@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Wydarzenia</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/creative.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Planner</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="index.html">strona główna</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="index.html#portfolio">galeria</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger active" href="#page-top">wydarzenia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead text-center text-white d-flex">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h1 class="text-uppercase">
+              <strong>Wydarzenia i imprezy</strong>
+            </h1>
+            <hr>
+          </div>
+          <div class="col-lg-8 mx-auto">
+            <p class="text-faded mb-5">Zobacz wszystkie wydarzenia, możesz też zaplanować nowe!</p>
+            <nav class="sticky masthead">
+                <a class="btn  btn-primary btn-xl js-scroll-trigger" href="#wydarzenia">Wszystkie wydarzenia</a>
+                <a class="btn  btn-primary btn-xl js-scroll-trigger"  href="#dodajWydarzenie">Dodaj nowe</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="sticky-stopper bg-primary" id="wydarzenia">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center wszystkieWydarzenia">
+            <h2 class="section-heading text-white">wydarzenia</h2>
+            <hr class="light my-4">
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dodajWydarzenie">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Dodaj nowe wydarzenie</h2>
+            <hr class="my-4">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-12">
+
+                <form class="form-horizontal" >
+
+                    <div class="form-group  col-xs-6">
+                        <label class="control-label col-sm-6" for="nazwaWydarzenia">Nazwa</label>
+                            <input required="required" type="text" id="nazwaWydarzenia"  class="form-control col-xs-6" pattern="^[a-zA-Z0-9ąĄćĆęĘłŁńŃóÓśŚżŻźŹ ]{2,20}$" title="2-20 znaków" name="nazwaWydarzenia" placeholder="nazwa" onkeyup="return sprawdz()"  onblur="return sprawdz()"  onfocus="return sprawdz()"  />
+                            <span id="nazwa_error" class="text-warning"></span>
+                    </div>
+
+                    <div class="form-group  col-xs-6">
+                        <label class="control-label col-sm-6" for="iloscMiejsc">Ilość miejsc</label>
+                        <input required="required" type="number" min="0" id="iloscMiejsc" class="form-control col-xs-6" pattern="^[1-9][0-9]{0,20}$" title="1-20 cyfr"  name="iloscMiejsc"  placeholder="Maksymalna ilość miejsc"  onkeyup="return sprawdz()"  onblur="return sprawdz()"  onfocus="return sprawdz()"/>
+                         <span id="iloscMiejsc_error" class="text-warning"></span>
+                    </div>
+
+                    <div class="form-group  col-xs-6">
+                        <label class="control-label col-sm-6" for="dataWydarzenia">Data</label>
+                        <input required="required" type="date" id="dataWydarzenia" class="form-control col-xs-6" name="dataWydarzenia" onkeyup="return sprawdz()"  onblur="return sprawdz()"  onfocus="return sprawdz()"/>
+                         <span id="data_error" class="text-warning"></span>
+                    </div>
+
+                    <div class="form-group  col-xs-6">
+                        <label class="control-label col-sm-6" for="czasRozp">Czas rozpoczęcia</label>
+                        <input required="required" type="time" id="czasRozp" class="form-control col-xs-6" name="czasRozp" onkeyup="return sprawdz()"  onblur="return sprawdz()"  onfocus="return sprawdz()"/>
+                        <label class="control-label col-sm-6" for="czasZak">Czas zakończenia</label>
+                        <input required="required" type="time"  id="czasZak" class="form-control col-xs-6" name="czasZak" onkeyup="return sprawdz()"  onblur="return sprawdz()"  onfocus="return sprawdz()"/>
+                         <span id="czas_error" class="text-warning"></span>
+                    </div>
+
+                    <div class="form-group  col-xs-6">
+                        <label  class="control-label col-sm-6" for="opisWydarzenia">Opis</label>
+                        <textarea required="required" id="opisWydarzenia" rows="2"  class="form-control col-xs-6" name="opisWydarzenia"  onkeyup="return sprawdz()" placeholder="opisz czego dotyczy to wydarzenie"  onblur="return sprawdz()"  onfocus="return sprawdz()"></textarea>
+                         <span id="opis_error" class="text-warning"></span>
+                    </div>
+
+                     <div class="form-group col-xs-6 poczatekWydarzenia">
+                            <label class="control-label  col-sm-6" for="punktWydarzenia0">Punkt programu</label>
+                            <input required="required" type="time" title="godzina punktu " id="czasPunktuWydarzenia0" class="form-control  czasPunktuWydarzenia  col-xs-6" name="czasPunktuWydarzenia0"   onkeyup="return sprawdz()"  onblur="return sprawdz()"  onfocus="return sprawdz()"/>
+                            <input required="required" type="text" pattern="^[a-zA-Z0-9ąĄćĆęĘłŁńŃóÓśŚżŻźŹ ]{2,20}$" title="2-20 znaków" id="punktWydarzenia0" class="form-control punktWydarzenia col-xs-6" name="punktWydarzenia0" placeholder="np. rozpoczęcie, zakończenie,egzamin"  onkeyup="return sprawdz()"  onblur="return sprawdz()"  onfocus="return sprawdz()"/>
+                             <span id="punktWydarzenia_error" class="text-warning punktWydarzenia_error"></span>
+                     </div>
+
+                    <input type="button" title="dodaj kolejny  punkt Wydarzenia" id="dodajpunktWydarzenia" class="dodajpunktWydarzenia" value="dodaj kolejny punkt wydarzenia"/>
+
+
+                     <div class="form-group col-xs-6">
+                            <label class="control-label col-sm-6" for="miejsceMojaLokalizacja">Ustaw miejsce jako moja lokalizacja</label>
+                            <input type="radio" id="miejsceMojaLokalizacja" class="form-control col-xs-6" name="miejsceMojaLokalizacja" oninput="getLocation()"/>
+                            <div id="geo"></div>
+                             <span id="lokalizacja_error" class="text-warning"></span>
+
+                    </div>
+
+
+                    <input type="submit" name="zapiszWydarzenie"  onsubmit="return sprawdz()" class="" value="zapisz wydarzenie" id="zapiszWydarzenie"/>
+
+
+
+                </form>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+
+
+
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">Pozostańmy w kontakcie</h2>
+            <hr class="my-4">
+            <p class="mb-5">Jeśli masz pytania, sugestie dotyczące strony napisz!</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto text-center">
+            <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
+            <p><a href="tel:999-999-999">999-999-999</a></p>
+          </div>
+          <div class="col-lg-4 mr-auto text-center">
+            <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
+            <p>
+              <a href="mailto:radoslaw.lipski@pollub.edu.pl">radoslaw.lipski@pollub.edu.pl</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/creative.js"></script>
+
+  </body>
+
+</html>
